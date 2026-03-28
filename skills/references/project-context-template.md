@@ -131,6 +131,7 @@
 | `README.md` | 新機能・設定変更 |
 | `CLAUDE.md` | アーキテクチャ変更 |
 | `.claude/rules/architecture.md` | モジュール構成変更 |
+| `.claude/skills/references/project-context.md` | パッケージ構成変更・ビルドコマンド変更・レビュー観点変更 |
 <!-- 追加のプロジェクト固有ドキュメントがあれば記載する -->
 
 ## ラベル・ワークフロー規約
