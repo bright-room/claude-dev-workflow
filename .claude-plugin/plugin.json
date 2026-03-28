@@ -1,0 +1,10 @@
+{
+  "name": "claude-dev-workflow",
+  "description": "Shared development workflow skills for plan, implement, review, and triage — reusable across repositories with project-specific context.",
+  "version": "1.0.0",
+  "author": {
+    "name": "bright-room"
+  },
+  "repository": "https://github.com/bright-room/claude-dev-workflow",
+  "license": "MIT"
+}
