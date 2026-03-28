@@ -8,7 +8,7 @@
       "name": "claude-dev-workflow",
       "source": ".",
       "description": "Shared development workflow skills for plan, implement, review, and triage — reusable across repositories with project-specific context.",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }
