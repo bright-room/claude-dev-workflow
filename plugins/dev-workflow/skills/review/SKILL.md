@@ -78,7 +78,7 @@ PR 番号が指定された場合は必ず PR レビューモードとなる。
 gh pr view <pr-number> --json baseRefName,headRefOid,headRefName
 
 # PR で変更されたファイル一覧を取得
-gh api repos/{owner}/{repo}/pulls/<pr-number>/files --jq '.[].filename'
+gh api 'repos/{owner}/{repo}/pulls/<pr-number>/files' --jq '.[].filename'
 ```
 
 ##### 1-2. レビュー済み判定と差分取得
@@ -87,7 +87,7 @@ gh api repos/{owner}/{repo}/pulls/<pr-number>/files --jq '.[].filename'
 
 ```bash
 # 過去のレビュー一覧を取得
-gh api repos/{owner}/{repo}/pulls/<pr-number>/reviews
+gh api 'repos/{owner}/{repo}/pulls/<pr-number>/reviews'
 ```
 
 - 自身（claude）の最新レビューの `commit_id`（レビュー時点の HEAD SHA）を特定する
@@ -146,7 +146,7 @@ gh api graphql -f query='
 指摘事項を GitHub PR レビューとして1回の API コールで投稿する。
 
 ```bash
-gh api repos/{owner}/{repo}/pulls/<pr-number>/reviews \
+gh api 'repos/{owner}/{repo}/pulls/<pr-number>/reviews' \
   --method POST \
   --input /tmp/review-payload.json
 ```
