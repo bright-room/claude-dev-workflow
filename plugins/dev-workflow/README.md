@@ -7,6 +7,7 @@ GitHub Issue を起点にした開発ワークフローを Claude Code のスキ
 
 | スキル | コマンド例 | 概要 |
 |--------|-----------|------|
+| **setup-project-context** | `/setup-project-context` | リポジトリを自動調査し、project-context.md を生成する |
 | **create-plan** | `/create-plan 42` | Issue の内容をもとにコードベースを調査し、実装プランを Issue コメントに投稿する |
 | **update-plan** | `/update-plan 42` | Issue コメントや会話のフィードバックを反映してプランを更新する |
 | **implement-plan** | `/implement-plan 42` | Issue 上のプランに従いコードを実装し、PR を作成する |
@@ -17,6 +18,9 @@ GitHub Issue を起点にした開発ワークフローを Claude Code のスキ
 ## ワークフロー
 
 ```
+/setup-project-context ── 初回セットアップ（project-context.md 生成）
+  │
+  ▼
 Issue 作成
   │
   ▼
@@ -40,6 +44,16 @@ Issue 作成
 ```
 
 ## 各スキルの詳細
+
+### setup-project-context
+
+```
+/setup-project-context
+```
+
+- リポジトリのコードベースを自動調査し、`.claude/skills/references/project-context.md` を生成
+- 言語・ビルドツール・テスト構成・ディレクトリ構成などを検出して、テンプレートの各セクションを埋める
+- 他のスキル（create-plan, implement-plan, review 等）が参照する project-context.md の初期セットアップに使用
 
 ### create-plan
 
@@ -133,7 +147,7 @@ Issue 作成
 
 各リポジトリに `.claude/skills/references/project-context.md` を配置することで、スキルの動作をプロジェクトに合わせてカスタマイズできる。
 
-テンプレートは `skills/references/project-context-template.md` を参照。
+`/setup-project-context` を実行すると、リポジトリを自動調査してテンプレートを埋めた `project-context.md` を生成できる。手動で作成する場合は `skills/references/project-context-template.md` を参照。
 
 主な設定項目:
 
