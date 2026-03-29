@@ -1,6 +1,6 @@
 {
   "name": "dev-workflow",
-  "description": "Shared development workflow skills for create-plan, update-plan, implement-plan, fix-review, review, and triage — reusable across repositories with project-specific context.",
+  "description": "Shared development workflow skills for setup-project-context, create-plan, update-plan, implement-plan, fix-review, review, and triage — reusable across repositories with project-specific context.",
   "author": {
     "name": "bright-room"
   }
