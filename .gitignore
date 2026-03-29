@@ -1,0 +1,17 @@
+HELP.md
+.env
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### AI agents ###
+/.claude/inputs/
+/.claude/outputs/
+.claude/settings.local.json
+**/*-workspace/
