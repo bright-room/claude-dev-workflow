@@ -2,7 +2,7 @@
 
 このファイルは `project-context.md` の雛形です。各リポジトリの `.claude/skills/references/project-context.md` に配置し、プロジェクト固有の情報を記入してください。
 
-共通スキル（plan, implement, review）はこのファイルを参照して、プロジェクト固有の調査・実装・レビューを行います。
+共通スキル（create-plan, update-plan, implement-plan, review, fix-review, triage）はこのファイルを参照して、プロジェクト固有の調査・実装・レビューを行います。
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## 実装ガイド
 
-<!-- implement スキルの「コードの実装」ステップで参照される -->
+<!-- implement-plan スキルの「コードの実装」ステップで参照される -->
 
 ### ビルド・フォーマットコマンド
 
@@ -136,7 +136,7 @@
 
 ## ラベル・ワークフロー規約
 
-<!-- implement スキルと triage スキルが参照する -->
+<!-- implement-plan スキルと triage スキルが参照する -->
 
 ### Issue/PR ラベルの prefix
 
